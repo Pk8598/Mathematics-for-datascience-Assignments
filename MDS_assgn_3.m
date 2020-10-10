@@ -1,11 +1,12 @@
-%-----Mathematics for Data science-----%
-%------------ Homework 3 --------------%
+%---------------- Mathematics for Data science ---------------------------%
+%------------------------ Homework 3 -------------------------------------%
+
+%----------------------------- Problem 1 ---------------------------------%
+% Plot and contour of f(x,y)=x^2- y^2 , -5<=x<=5 & -5<=y<=5
 
 clear
 clc
 close all
-
-% Plot and contour of f(x,y)=x^2- y^2 , -5<=x<=5 & -5<=y<=5
 
 figure('name','Plot of f(x,y)=x^2- y^2')
 [x,y]=meshgrid(-5:0.05:5);
@@ -19,11 +20,12 @@ contourf(x,y,z,20);title('Contour plot of f(x,y)=x^2- y^2')
 xlabel('x-axis');ylabel('y-axis');
 colorbar;
 %%
+%----------------------------- Problem 2 ---------------------------------%
+% Convex hull of randomly generated 2D points (x,y) , -5<=x<=5 & -5<=y<=5
 clear
 clc
 close all
 
-% Convex hull of randomly generated 2D points (x,y) , -5<=x<=5 & -5<=y<=5
 a=-5;b=5;
 points=a+(b-a).*rand(24,2);
 boundry_point_rows= convhull(points(:,1),points(:,2));
@@ -47,9 +49,14 @@ legend('Random points','Convex hull');
 % k = convhulln(P);
 % trisurf(k,P(:,1),P(:,2),P(:,3),'FaceColor','cyan')
 %%
+%----------------------------- Problem 3 ---------------------------------%
+% Given f(x)=x'Ax find counter examples(matrix A) for which f(x) is not
+% convex. here x is a 2D point and A is any 2x2 real matrix
+
 clear
 clc
 close all
+
 a=-10;b=10; % range of x1 and x2 
 [x1,x2]=meshgrid(a:1:b);
 siz=size(x1);
@@ -122,6 +129,9 @@ end
 
 
 
+
+
+ 
 
 
  
